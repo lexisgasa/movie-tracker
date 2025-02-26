@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Movie Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Movie Tracker is a React application that uses the OMDb API to display a list of movies. Users can rate movies with a personal score, mark them as watched, and keep track of detailed statistics such as the average rating and total minutes watched. Additionally, it's easy to remove movies once they have been watched. The app also remembers if a movie has already been rated and allows users to close the menu using the Escape key.
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+You can check out the live version of the app here: [Movie Tracker](https://movie-trackerv0.netlify.app/)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run this project locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js and npm installed on your computer.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/lexisgasa/movie-tracker.git
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Navigate to the project directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   cd movie-tracker
+   ```
 
-### `npm run eject`
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Running the App
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To start the app in development mode, run:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This will open the app in your default browser at [http://localhost:3000](http://localhost:3000). The page will reload automatically as you make changes.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Movie Tracker (Versión en Español)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Movie Tracker es una aplicación creada con React que utiliza la API de OMDb para mostrar un listado de películas. Los usuarios pueden calificar las películas con una puntuación personal, marcarlas como vistas y llevar un registro detallado de estadísticas, como la media de puntuación dada y el número total de minutos vistos. Además, es muy fácil eliminar las películas si ya se han visto. La aplicación recuerda si una película ya ha sido valorada y permite cerrar el menú usando la tecla Escape.
 
-### Code Splitting
+## Demo en Vivo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Puedes probar la versión en vivo de la aplicación aquí: [Movie Tracker](https://movie-trackerv0.netlify.app/)
 
-### Analyzing the Bundle Size
+## Cómo Empezar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Para ejecutar este proyecto en local, sigue estos pasos:
 
-### Making a Progressive Web App
+### Requisitos Previos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Node.js y npm instalados en tu computadora.
 
-### Advanced Configuration
+### Instalación
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Clona el repositorio:
 
-### Deployment
+   ```bash
+   git clone https://github.com/lexisgasa/movie-tracker.git
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. Navega al directorio del proyecto:
 
-### `npm run build` fails to minify
+   ```bash
+   cd movie-tracker
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+### Ejecutar la Aplicación
+
+Para iniciar la aplicación en modo de desarrollo, ejecuta:
+
+```bash
+npm start
+```
+
+Esto abrirá la aplicación en tu navegador predeterminado en [http://localhost:3000](http://localhost:3000). La página se recargará automáticamente a medida que realices cambios.
