@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import SearchBar from "./Components/SearchBar";
 import NumResults from "./Components/NumResults";
@@ -10,17 +10,14 @@ import Box from "./Box/Box";
 import Loader from "./Components/Loader";
 import ErrorMessage from "./Components/ErrorMessage";
 import SelectedMovie from "./SelectedMovie/SelectedMovie";
-import useLocalStorage from "./hooks/useLocalStorage/useLocalStorage";
-
-const KEY = "a2137f99";
+import useLocalStorage from "./hooks/useLocalStorage";
+import useMovies from "./hooks/useMovies";
 
 export default function App() {
-  const [movies, setMovies] = useState([]);
   const [watched, setWatched] = useLocalStorage("watchedMovies", []);
-  const [isLoading, setIsLoading] = useState(false);
   const [query, setQuery] = useState("");
-  const [error, setError] = useState("");
   const [selectedId, setSelectedId] = useState(null);
+  const { movies, error, isLoading } = useMovies(query, handleCloseMovie);
 
   const handleSelectedId = (id) => {
     setSelectedId((currentSelectedId) =>
@@ -28,9 +25,9 @@ export default function App() {
     );
   };
 
-  const handleCloseMovie = () => {
+  function handleCloseMovie() {
     setSelectedId(null);
-  };
+  }
 
   const handleAddWatchedMovie = (movie) => {
     setWatched((watched) => [...watched, movie]);
@@ -43,42 +40,6 @@ export default function App() {
       });
     });
   };
-
-  useEffect(() => {
-    (async () => {
-      if (!query) return;
-      if (!query.length) {
-        setMovies([]);
-        setError("");
-        return;
-      }
-
-      setIsLoading(true);
-      setError("");
-      try {
-        const response = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
-        );
-        const data = await response.json();
-
-        if (data.Response === "False") throw new Error(data.Error);
-
-        setMovies(data.Search);
-      } catch (error) {
-        console.error("Error fetching movies:", error);
-        setError(error.message);
-      } finally {
-        setIsLoading(false);
-      }
-
-      if (query.length < 3) {
-        setMovies([]);
-        setError("");
-        return;
-      }
-      handleCloseMovie();
-    })();
-  }, [query]);
 
   return (
     <>
