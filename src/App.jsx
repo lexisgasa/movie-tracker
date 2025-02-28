@@ -10,7 +10,7 @@ import Box from "./Box/Box";
 import Loader from "./Components/Loader";
 import ErrorMessage from "./Components/ErrorMessage";
 import SelectedMovie from "./SelectedMovie/SelectedMovie";
-import useLocalStorage from "./useLocalStorage/useLocalStorage";
+import useLocalStorage from "./hooks/useLocalStorage/useLocalStorage";
 
 const KEY = "a2137f99";
 
