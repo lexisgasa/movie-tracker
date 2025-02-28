@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const KEY = "a2137f99";
 
-const useMovies = (query, callback) => {
+const useMovies = (query) => {
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -15,13 +15,12 @@ const useMovies = (query, callback) => {
         setError("");
         return;
       }
-      callback?.();
 
       setIsLoading(true);
       setError("");
       try {
         const response = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
+          `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`
         );
         const data = await response.json();
 
@@ -40,7 +39,6 @@ const useMovies = (query, callback) => {
         setError("");
         return;
       }
-      // handleCloseMovie();
     })();
   }, [query]);
 
